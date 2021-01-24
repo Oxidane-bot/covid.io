@@ -8,19 +8,26 @@ body{
     background-size: cover ;
     background-attachment: fixed;
 }
-
+.div_center
+{
+    margin: 0 auto;
+    max-width: 1200px;
+    background-color: #ccc;
+    border-radius: 3px;
+}
 .dropdown :hover>.dropdown-menu{
     display: block;
 }
-.div_center{
-    position: relative;
-    margin: auto;
-    width: 1200px;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
+
+/*.div_center{*/
+/*    position: relative;*/
+/*    margin: auto;*/
+/*    !*width: 1200px;*!*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
+/*}*/
 
 
 .table{

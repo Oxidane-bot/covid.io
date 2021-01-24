@@ -93,7 +93,6 @@ function my_tests() {
 // append a 'group' element to 'svg'
 // moves the 'group' element to the top left margin
     var svg = d3.select("#main_svg").append("svg")
-
         .append("g")
         .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");

@@ -1,56 +1,25 @@
+// Set of data
+var dataset = [31, 64, 42, 28, 16, 32, 64, 10];
 
-// set the dimensions and margins of the graph
-var margin = {top: 20, right: 20, bottom: 30, left: 40},
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
 
-// set the ranges
-var x = d3.scaleBand()
-    .range([0, width])
-    .padding(0.1);
-var y = d3.scaleLinear()
-    .range([height, 0]);
+// Create our SVG container
+var svg = d3.select("#bar-chart")
+    .append("svg")
+    .attr('viewBox','0 0 1200 800' )
+    .attr('preserveAspectRatio','xMinYMin');
 
-// append the svg object to the body of the page
-// append a 'group' element to 'svg'
-// moves the 'group' element to the top left margin
-var svg = d3.select("body").append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-    .append("g")
-    .attr("transform",
-        "translate(" + margin.left + "," + margin.top + ")");
 
-// get the data
-d3.csv("https://api.coronavirus.data.gov.uk/v2/data?areaType=overview&metric=cumTestsByPublishDate&format=csv", function(error, data) {
-    if (error) throw error;
 
-    // format the data
-    data.forEach(function(d) {
-        d.cumTestsByPublishDate = +d.cumTestsByPublishDate;
-    });
+var bars = svg.append('g')
+    .attr('class', 'bars');
 
-    // Scale the range of the data in the domains
-    x.domain(data.map(function(d) { return d.date; }).slice(0,28));
-    y.domain([0, d3.max(data, function(d) { return d.cumTestsByPublishDate; })]);
-    console.log(d.cumTestsByPublishDate)
-    // append the rectangles for the bar chart
-    svg.selectAll(".bar")
-        .data(data)
-        .enter().append("rect")
-        .attr("class", "bar")
-        .attr("x", function(d) { return x(d.date); })
-        .attr("width", x.bandwidth())
-        .attr("y", function(d) { return y(d.cumTestsByPublishDate); })
-        .attr("height", function(d) { return height - y(d.cumTestsByPublishDate); });
 
-    // add the x Axis
-    svg.append("g")
-        .attr("transform", "translate(0," + height + ")")
-        .call(d3.axisBottom(x));
-
-    // add the y Axis
-    svg.append("g")
-        .call(d3.axisLeft(y));
-
-});
+// Bind data to chart, and create bars
+bars.selectAll('rect')
+    .data(dataset)
+    .enter()
+    .append('rect')
+    .attr('x', (d,i) => i*25 )
+    .attr('y', (d) => 100-d)
+    .attr('width', 20)
+    .attr('height', (d) => d);

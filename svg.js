@@ -20,8 +20,6 @@ function my_cases() {
     // append a 'group' element to 'svg'
     // moves the 'group' element to the top left margin
     var svg = d3.select("#main_svg").append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
         .append("g")
         .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
@@ -72,6 +70,7 @@ function my_cases() {
         svg.append("g")
             .call(d3.axisLeft(y));
 
+        responsive()
     });
 }
 
@@ -94,8 +93,7 @@ function my_tests() {
 // append a 'group' element to 'svg'
 // moves the 'group' element to the top left margin
     var svg = d3.select("#main_svg").append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
+
         .append("g")
         .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
@@ -146,6 +144,7 @@ function my_tests() {
             .call(d3.axisLeft(y));
 
         svg.attr("transform","translate(50,20)")
+        responsive()
     });
 
 }
@@ -170,8 +169,8 @@ function my_deaths(){
     // append a 'group' element to 'svg'
     // moves the 'group' element to the top left margin
     var svg = d3.select("#main_svg").append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
+        .attr('viewBox','0 0 1060 500' )
+        .attr('preserveAspectRatio','xMinYMin')
         .append("g")
         .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
@@ -223,10 +222,16 @@ function my_deaths(){
         svg.append("g")
             .call(d3.axisLeft(y));
 
+        responsive()
     });
 
 
 
+}
+function responsive(){
+    d3.select("svg")
+        .attr('viewBox','0 0 1060 500' )
+        .attr('preserveAspectRatio','xMinYMin')
 }
 
 

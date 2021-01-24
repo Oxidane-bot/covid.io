@@ -14,8 +14,8 @@ var y = d3.scaleLinear()
 // append a 'group' element to 'svg'
 // moves the 'group' element to the top left margin
 var svg = d3.select("#main_svg").append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
+    // .attr('viewBox','0 0 1060 500')
+    // .attr('preserveAspectRatio','xMinYMin')
     .append("g")
     .attr("transform",
         "translate(" + margin.left + "," + margin.top + ")");
@@ -66,4 +66,7 @@ d3.csv("https://coronavirus.data.gov.uk/api/v2/data?areaType=overview&metric=new
     svg.append("g")
         .call(d3.axisLeft(y));
 
+
+
+responsive()
 });

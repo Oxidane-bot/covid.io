@@ -1,0 +1,29 @@
+
+/*.container{*/
+/*     display: flex;*/
+/*     justify-content: space-around;*/
+/* }*/
+body{
+    background-image: url("image/bgimg.png");
+    background-size: cover ;
+    background-attachment: fixed;
+}
+
+.dropdown :hover>.dropdown-menu{
+    display: block;
+}
+.div_center{
+    position: relative;
+    margin: auto;
+    width: 1200px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+.table{
+    margin-bottom: -0.22rem;
+}
+

@@ -11,19 +11,20 @@
     <script src="https://d3js.org/d3.v4.min.js"></script>
 </head>
 <body >
-<!--<style > .bar { fill: #f58b25; }</style>-->
+
 
 <nav class="navbar-expand-xl navbar-dark bg-dark div_center ">
     <div class="collapse navbar-collapse" id="#">
     <a class="navbar-brand"><img src="image/logo.png" alt="logo"></a>
-<!--    <span class="navbar-text"> Covid cases visualization </span>-->
+
     <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link" href="#res"> Restrictions </a>
-        </li>
         <li class="nav-item">
             <a class="nav-link" href="#medical"> Medical helps </a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#res"> Restrictions </a>
+        </li>
+
         <li class="nav-item">
             <a class="nav-link" href="#mental"> mental health </a>
         </li>
@@ -74,9 +75,7 @@
     </table>
 
 </div>
-<!--<div class="bg-white" style="position: absolute;width: 1200px;top:0 ">-->
-<!--            <p>ssss</p>-->
-<!--</div>-->
+
     <div class="jumbotron div_center bg-white"  id="main_svg" >
 
         <button type="button" class="btn btn-warning text-white"  id="button1" onclick="my_cases()" >Cases</button>
@@ -106,7 +105,9 @@
 <iframe  src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d294167.13747363584!2d-1.7279883699880185!3d54.82950935243678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shospital!5e0!3m2!1sen!2s!4v1611520595071!5m2!1sen!2s" width="1060" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 <li align="right" class="text-break">Hospitals around durham from Google map</li>
 </div>
-
+<div class="jumbotron div_center" id="second-svg">
+    <h3 class="text-lg-left"> Top 10 high risk area in UK</h3>
+</div>
 <div class="jumbotron bg-light div_center" id="res">
     <h1>National lockdown: stay at home</h1>
     <p>

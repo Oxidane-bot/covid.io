@@ -1,4 +1,5 @@
-d3.csv("https://coronavirus.data.gov.uk/api/v2/data?areaType=overview&metric=cumAntibodyTestsByPublishDate&metric=cumCasesByPublishDate&metric=cumTestsByPublishDate&metric=hospitalCases&metric=cumDeathsByPublishDate&format=csv", function (d) {
+d3.csv("https://coronavirus.data.gov.uk/api/v2/data?areaType=overview&metric=cumAntibodyTestsByPublishDate&metric=cumCasesByPublishDate&metric=" +
+    "cumTestsByPublishDate&metric=hospitalCases&metric=cumDeathsByPublishDate&format=csv", function (d) {
     let i = 0
     let yesterday_cases = (eval(d.map(function (d) {
         return d.cumCasesByPublishDate

@@ -31,8 +31,9 @@ function my_cases() {
 
         // format the data
         data.forEach(function (d) {
-            d.newCasesByPublishDate = +d.newCasesByPublishDate;
-            d.date = d.date.slice(5,)
+                d.newCasesByPublishDate = +d.newCasesByPublishDate;
+                d.date = d.date.slice(5,)
+
         });
 
 
@@ -230,7 +231,7 @@ function my_deaths(){
 function responsive(){
     d3.select("svg")
         .attr('viewBox','0 0 1060 500' )
-        .attr('preserveAspectRatio','xMinYMin')
+        .attr('preserveAspectRatio','xMidYMin')
 }
 
 

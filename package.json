@@ -1,18 +1,15 @@
 {
-  "name": "prog-gold",
+  "name": "covid_cases_page",
   "version": "1.0.0",
-  "description": "",
-  "main": "data_handling.js",
-  "directories": {
-    "test": "test"
-  },
-  "dependencies": {
+  "description": "prog-gold assignment",
+  "main": "main.js",
+  "dependencies": {},
+  "devDependencies": {
     "eslint": "^7.18.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Hongyu Chen",
   "license": "ISC"
 }

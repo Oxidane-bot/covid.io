@@ -423,7 +423,8 @@ function responsive() {
 /**
  * only works for top 10 high risk svg for sorting out highest areas
  * @param area_data_array an array where each element's[0] stores area name and [1] stores cases number
- * @returns {(*|number)[]}
+ * @returns {(*|number)[]} getting the position of the greatest item, and i can remove it and find another greatest
+ * using this function.
  */
 function find_greatest(area_data_array) {
     let greatest = 0
